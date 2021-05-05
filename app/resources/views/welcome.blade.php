@@ -40,7 +40,7 @@
         <div class="container">
 
             <!-- small devices logo -->
-            <a href="/"> <img src="{{asset('logo.png')}}" alt=""></a>
+            <a href="/"> <img src="{{asset('logo.png')}}"width="180" height="60" alt=""></a>
             <!-- small devices logo ends -->
 
             <!-- menu button -->
