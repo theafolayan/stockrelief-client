@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="format-detection" content="telephone=no">
+<title>Saasflix HTML Landing Page</title>
+<meta name="author" content="tansh">
+<meta name="description" content="HTML Teamplate">
+<meta name="keywords" content="webapp, app, software">
+
+<!-- FAVICON FILES -->
+<link href="assets/images/icons/apple-touch-icon-144-precomposed.png" rel="apple-touch-icon" sizes="144x144">
+<link href="assets/images/icons/apple-touch-icon-120-precomposed.png" rel="apple-touch-icon" sizes="120x120">
+<link href="assets/images/icons/apple-touch-icon-76-precomposed.png" rel="apple-touch-icon" sizes="76x76">
+<link href="assets/images/icons/favicon.png" rel="shortcut icon">
+
+<!-- CSS FILES -->
+<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+<link rel="stylesheet" href="assets/fonts/iconfonts.css">
+<link rel="stylesheet" href="assets/css/plugins.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/responsive.css">
+<link rel="stylesheet" href="assets/css/color.css">
+</head>
+<body>
+<div id="dtr-wrapper" class="clearfix"> 
+    
+    <!-- preloader starts -->
+    <div class="dtr-preloader">
+        <div class="dtr-preloader-inner">
+            <div class="dtr-preloader-img"></div>
+        </div>
+    </div>
+    <!-- preloader ends --> 
+    
+    <!-- Small Devices Header 
+============================================= -->
+    <div class="dtr-responsive-header fixed-top">
+        <div class="container"> 
+            
+            <!-- small devices logo --> 
+            <a href="index.html"><img src="assets/images/logo-dark.png" alt="logo"></a> 
+            <!-- small devices logo ends --> 
+            
+            <!-- menu button -->
+            <button id="dtr-menu-button" class="dtr-hamburger" type="button"><span class="dtr-hamburger-lines-wrapper"><span class="dtr-hamburger-lines"></span></span></button>
+        </div>
+        <div class="dtr-responsive-header-menu"></div>
+    </div>
+    <!-- Small Devices Header ends 
+============================================= --> 
+    
+    <!-- Header 
+============================================= -->
+    <header id="dtr-header-global" class="fixed-top bg-white">
+        <div class="container">
+            <div class="d-flex align-items-center justify-content-between"> 
+                
+                <!-- header left starts -->
+                <div class="dtr-header-left"> 
+                    
+                    <!-- logo --> 
+                    <a class="logo-default dtr-scroll-link" href="#home"><img src="assets/images/logo-dark.png" alt="logo"></a> 
+                    
+                    <!-- logo on scroll --> 
+                    <a class="logo-alt dtr-scroll-link" href="#home"><img src="assets/images/logo-dark.png" alt="logo"></a> 
+                    <!-- logo on scroll ends --> 
+                    
+                </div>
+                <!-- header left ends --> 
+                
+                <!-- menu starts-->
+                <div class="main-navigation navbar navbar-expand-lg ml-auto">
+                    <ul class="dtr-scrollspy navbar-nav dtr-nav dark-nav-on-load dark-nav-on-scroll">
+                        <li class="nav-item"> <a class="nav-link" href="index.html">Home</a> </li>
+                        <li class="nav-item"> <a class="nav-link" href="single-page.html">About</a> </li>
+                        <li class="nav-item"> <a class="nav-link active" href="#">Contact</a> </li>
+                    </ul>
+                </div>
+                <!-- menu ends--> 
+                
+                <!-- header right starts -->
+                <div class="dtr-header-right"> <a href="#plans" class="dtr-btn btn-green dtr-scroll-link dtr-px-50">Get Started</a> </div>
+                <!-- header right ends --> 
+                
+            </div>
+        </div>
+    </header>
+    <!-- header ends
+================================================== --> 
+    
+    <!-- Page Title 
+============================================= -->
+    <div class="dtr-page-title-wrapper dtr-section-with-bg hero-section-top-padding" style="background-image: url(assets/images/hero-bg2.jpg);">
+        <div class="dtr-overlay dtr-overlay-dark-blue"></div>
+        <div class="container dtr-page-title-inner">
+            <div class="row">
+                <div class="col-12 dtr-page-title-content">
+                    <h1 class="dtr-entry-title wow fadeInUp color-white">Contact</h1>
+                    <p class="dtr-entry-subtitle wow fadeInUp color-white" data-wow-delay=".6s">Drop us a line</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Page Title ends
+============================================= --> 
+    
+    <!-- == main content area starts == -->
+    <div id="dtr-main-content"> 
+        
+        <!-- hero section starts
+================================================== -->
+        <section id="home" class="dtr-section dtr-py-100">
+            <div class="container"> 
+                
+                <!-- row starts -->
+                <div class="row d-flex align-items-center"> 
+                    
+                    <!-- column 1 starts -->
+                    <div class="col-12 col-md-6">
+                        <h3>Let’s talk about everything! </h3>
+                        <p class="text-size-lg">Have a project in mind<br>
+                            or Business inquiry? Drop us a line.</p>
+                        <p>There are many variations of passages of lorem ipsum available but the majority have suffered alteration in some form by injected humour.</p>
+                        <h5 class="dtr-mt-30 dtr-mb-10">Our Timings</h5>
+                        <p>Mon - Fri : 9:00am to 5:30pm<br>
+                            Saturday : 10:00am to 5:00pm<br>
+                            Sunday : Closed.</p>
+                    </div>
+                    <!-- column 1 starts --> 
+                    
+                    <!-- column 2 starts -->
+                    <div class="col-12 col-md-6 dtr-md-mt-30">
+                        <div class="dtr-box bg-light-blue"> 
+                            
+                            <!-- form starts -->
+                            <div class="dtr-form">
+                                <form id="contactform" method="post" action="php/contact-form.php">
+                                    <fieldset>
+                                        <div class="dtr-form-row dtr-form-row-2col">
+                                            <p class="dtr-form-column">
+                                                <input name="name"  type="text" placeholder="Name">
+                                            </p>
+                                            <p class="dtr-form-column">
+                                                <input name="phone"  type="text" placeholder="Phone">
+                                            </p>
+                                        </div>
+                                        <p>
+                                            <input name="email"  class="required email" type="text" placeholder="Email address">
+                                        </p>
+                                        <p class="antispam">Leave this empty: <br />
+                                            <input name="url" />
+                                        </p>
+                                        <p>
+                                            <textarea rows="6" name="message" id="message" class="required"  placeholder="Message"></textarea>
+                                        </p>
+                                        <button class="dtr-btn btn-green w-100" type="submit">Send Message</button>
+                                        <div id="result"></div>
+                                    </fieldset>
+                                </form>
+                            </div>
+                            <!-- form ends --> 
+                            
+                        </div>
+                    </div>
+                    <!-- column 2 ends --> 
+                    
+                </div>
+                <!-- row ends --> 
+                
+            </div>
+        </section>
+        <!-- hero section ends
+================================================== --> 
+        
+        <!-- faq section starts
+================================================== -->
+        <section id="faq" class="dtr-section dtr-py-100 bg-light-blue" style="background-image: url(assets/images/section-bg1.png);">
+            <div class="container">
+                <h3 class="color-green dtr-mb-40">Frequently asked questions</h3>
+                <!-- row 1 starts -->
+                <div class="row"> 
+                    
+                    <!-- column 1 starts -->
+                    <div class="col-12 col-md-6"> 
+                        
+                        <!-- faq item starts -->
+                        <div class="faq-item">
+                            <h4 class="faq-heading">Can I integrate my enterprise software with Saasflix? </h4>
+                            <div class="faq-content">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.</div>
+                        </div>
+                        <!-- faq item ends --> 
+                        
+                        <!-- faq item starts -->
+                        <div class="faq-item">
+                            <h4 class="faq-heading">If I invite my suppliers or customers to Saasflix, do I have to pay for their accounts? </h4>
+                            <div class="faq-content">It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages.</div>
+                        </div>
+                        <!-- faq item ends --> 
+                        
+                        <!-- faq item starts -->
+                        <div class="faq-item dtr-mb-0">
+                            <h4 class="faq-heading">What perks do I get for prepaying my subscription? </h4>
+                            <div class="faq-content">Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus. </div>
+                        </div>
+                        <!-- faq item ends --> 
+                        
+                    </div>
+                    <!-- column 1 ends --> 
+                    
+                    <!-- column 2 starts -->
+                    <div class="col-12 col-md-6"> 
+                        
+                        <!-- faq item starts -->
+                        <div class="faq-item">
+                            <h4 class="faq-heading">Can I install Saasflix on my own hardware? </h4>
+                            <div class="faq-content">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque. </div>
+                        </div>
+                        <!-- faq item ends --> 
+                        
+                        <!-- faq item starts -->
+                        <div class="faq-item">
+                            <h4 class="faq-heading">How can I obtain a copy of my data? </h4>
+                            <div class="faq-content">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour. </div>
+                        </div>
+                        <!-- faq item ends --> 
+                        
+                        <!-- faq item starts -->
+                        <div class="faq-item">
+                            <h4 class="faq-heading">How safe is my data? </h4>
+                            <div class="faq-content">Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. </div>
+                        </div>
+                        <!-- faq item ends --> 
+                        
+                    </div>
+                    <!-- column 2 ends --> 
+                    
+                </div>
+                <!-- row 1 ends --> 
+                
+            </div>
+        </section>
+        <!-- faq section ends
+================================================== --> 
+        
+        <!-- footer section starts
+================================================== -->
+        <footer id="dtr-footer" class="dtr-section-with-bg" style="background-image: url(assets/images/footer-bg.png);">
+            <div class="container">
+                <div class="row"> 
+                    
+                    <!-- column 1 starts -->
+                    <div class="col-12 col-sm-6 col-lg-4 dtr-mb-30"> <a href="index.html" class="d-block dtr-mb-15"><img src="assets/images/logo-dark.png" alt="logo"></a>
+                        <p>Lorem ipsum dolor sit amet consect adipiscing elit, sed do eiusmod tempor incididunt labore at dolore.</p>
+                        <p>© 2020 Saasflix. All rights reserved.</p>
+                    </div>
+                    <!-- column 1 ends --> 
+                    
+                    <!-- column 2 starts -->
+                    <div class="col-12 col-sm-6 col-lg-2 dtr-mb-30">
+                        <h4 class="color-green">Company</h4>
+                        <ul class="dtr-list-simple">
+                            <li><a href="#" class="dtr-styled-link">Features</a></li>
+                            <li><a href="#" class="dtr-styled-link">Plan</a></li>
+                            <li><a href="#" class="dtr-styled-link">Blog</a></li>
+                            <li><a href="#" class="dtr-styled-link">Contact</a></li>
+                        </ul>
+                    </div>
+                    <!-- column 2 ends --> 
+                    
+                    <!-- column 3 starts -->
+                    <div class="col-12 col-sm-6 col-lg-2 dtr-mb-30">
+                        <h4 class="color-green">Support</h4>
+                        <ul class="dtr-list-simple">
+                            <li><a href="#" class="dtr-styled-link">Careers</a></li>
+                            <li><a href="#" class="dtr-styled-link">Help</a></li>
+                            <li><a href="#" class="dtr-styled-link">Privacy Policy</a></li>
+                            <li><a href="#" class="dtr-styled-link">Terms</a></li>
+                        </ul>
+                    </div>
+                    <!-- column 3 ends --> 
+                    
+                    <!-- column 4 starts -->
+                    <div class="col-12 col-sm-6 col-lg-4 dtr-mb-30">
+                        <h4 class="color-green">Newsletter</h4>
+                        <div class="dtr-form dtr-form-has-icon dtr-form-no-gap">
+                            <form id="subscribeform" method="post" action="#">
+                                <fieldset>
+                                    <div class="dtr-form-row-2col">
+                                        <p class="dtr-input dtr-form-column"> <i class="icon-envelope1 color-dark-blue"></i>
+                                            <input name="email"  class="required email" type="text" placeholder="Email address">
+                                        </p>
+                                        <p class="dtr-form-column">
+                                            <button class="dtr-btn btn-green" type="submit">Subscribe</button>
+                                        </p>
+                                    </div>
+                                </fieldset>
+                            </form>
+                        </div>
+                        <div class="dtr-social-large">
+                            <ul class="dtr-social dtr-social-list color-white-muted-alt accent-color-hover text-center">
+                                <li><a href="#" class="dtr-twitter" target="_blank" title="twitter"></a></li>
+                                <li><a href="#" class="dtr-facebook" target="_blank" title="facebook"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- column 4 ends --> 
+                    
+                </div>
+            </div>
+        </footer>
+        <!-- footer section ends
+================================================== --> 
+        
+    </div>
+    <!-- == main content area ends == --> 
+    
+</div>
+<!-- #dtr-wrapper ends --> 
+
+<!-- JS FILES --> 
+<script src="assets/js/jquery.min.js"></script> 
+<script src="assets/js/bootstrap.min.js"></script> 
+<script src="assets/js/plugins.js"></script> 
+<script src="assets/js/custom.js"></script>
+</body>
+</html>
