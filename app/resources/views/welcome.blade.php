@@ -40,7 +40,7 @@
         <div class="container">
 
             <!-- small devices logo -->
-            <a href="index.html"> <h3> Stock Relief</h3></a>
+            <a href="/"> <img src="{{asset('logo.png')}}" alt=""></a>
             <!-- small devices logo ends -->
 
             <!-- menu button -->
@@ -61,10 +61,10 @@
                 <div class="dtr-header-left">
 
                     <!-- logo -->
-                    <a class="logo-default dtr-scroll-link" href="#home"><h3 style="color: whitesmoke;"> StockRelief</h3></a>
+                    <a class="logo-default dtr-scroll-link" href="#home"><img src="{{asset('logo.png')}}" width="120" height="60" alt=""></a>
 
                     <!-- logo on scroll -->
-                    <a class="logo-alt dtr-scroll-link" href="#home"> <h3> StockRelief</h3></a>
+                    <a class="logo-alt dtr-scroll-link" href="#home"> <img src="{{asset('logo.png')}}"  width="180" height="60" alt=""></a>
                     <!-- logo on scroll ends -->
 
                 </div>
@@ -1021,7 +1021,7 @@
 </div>
 <!-- #dtr-wrapper ends -->
 
-<!-- JS FILES -->lo
+<!-- JS FILES -->
 <script src="//code.jivosite.com/widget/25Lksdr5My" async></script>
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/js/bootstrap.min.js"></script>
