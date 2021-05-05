@@ -1,132 +1,1031 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="format-detection" content="telephone=no">
+<title>StockRelief</title>
+<meta name="author" content="tansh">
+<meta name="description" content="HTML Teamplate">
+<meta name="keywords" content="webapp, app, software">
 
-        <title>Laravel</title>
+<!-- FAVICON FILES -->
+<link href="assets/images/icons/apple-touch-icon-144-precomposed.png" rel="apple-touch-icon" sizes="144x144">
+<link href="assets/images/icons/apple-touch-icon-120-precomposed.png" rel="apple-touch-icon" sizes="120x120">
+<link href="assets/images/icons/apple-touch-icon-76-precomposed.png" rel="apple-touch-icon" sizes="76x76">
+<link href="assets/images/icons/favicon.png" rel="shortcut icon">
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+<!-- CSS FILES -->
+<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+<link rel="stylesheet" href="assets/fonts/iconfonts.css">
+<link rel="stylesheet" href="assets/css/plugins.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/responsive.css">
+<link rel="stylesheet" href="assets/css/color.css">
+</head>
+<body>
+<div id="dtr-wrapper" class="clearfix">
 
-        <!-- Styles -->
-        <style>
-            /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}a{background-color:transparent}[hidden]{display:none}html{font-family:system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;line-height:1.5}*,:after,:before{box-sizing:border-box;border:0 solid #e2e8f0}a{color:inherit;text-decoration:inherit}svg,video{display:block;vertical-align:middle}video{max-width:100%;height:auto}.bg-white{--bg-opacity:1;background-color:#fff;background-color:rgba(255,255,255,var(--bg-opacity))}.bg-gray-100{--bg-opacity:1;background-color:#f7fafc;background-color:rgba(247,250,252,var(--bg-opacity))}.border-gray-200{--border-opacity:1;border-color:#edf2f7;border-color:rgba(237,242,247,var(--border-opacity))}.border-t{border-top-width:1px}.flex{display:flex}.grid{display:grid}.hidden{display:none}.items-center{align-items:center}.justify-center{justify-content:center}.font-semibold{font-weight:600}.h-5{height:1.25rem}.h-8{height:2rem}.h-16{height:4rem}.text-sm{font-size:.875rem}.text-lg{font-size:1.125rem}.leading-7{line-height:1.75rem}.mx-auto{margin-left:auto;margin-right:auto}.ml-1{margin-left:.25rem}.mt-2{margin-top:.5rem}.mr-2{margin-right:.5rem}.ml-2{margin-left:.5rem}.mt-4{margin-top:1rem}.ml-4{margin-left:1rem}.mt-8{margin-top:2rem}.ml-12{margin-left:3rem}.-mt-px{margin-top:-1px}.max-w-6xl{max-width:72rem}.min-h-screen{min-height:100vh}.overflow-hidden{overflow:hidden}.p-6{padding:1.5rem}.py-4{padding-top:1rem;padding-bottom:1rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.pt-8{padding-top:2rem}.fixed{position:fixed}.relative{position:relative}.top-0{top:0}.right-0{right:0}.shadow{box-shadow:0 1px 3px 0 rgba(0,0,0,.1),0 1px 2px 0 rgba(0,0,0,.06)}.text-center{text-align:center}.text-gray-200{--text-opacity:1;color:#edf2f7;color:rgba(237,242,247,var(--text-opacity))}.text-gray-300{--text-opacity:1;color:#e2e8f0;color:rgba(226,232,240,var(--text-opacity))}.text-gray-400{--text-opacity:1;color:#cbd5e0;color:rgba(203,213,224,var(--text-opacity))}.text-gray-500{--text-opacity:1;color:#a0aec0;color:rgba(160,174,192,var(--text-opacity))}.text-gray-600{--text-opacity:1;color:#718096;color:rgba(113,128,150,var(--text-opacity))}.text-gray-700{--text-opacity:1;color:#4a5568;color:rgba(74,85,104,var(--text-opacity))}.text-gray-900{--text-opacity:1;color:#1a202c;color:rgba(26,32,44,var(--text-opacity))}.underline{text-decoration:underline}.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.w-5{width:1.25rem}.w-8{width:2rem}.w-auto{width:auto}.grid-cols-1{grid-template-columns:repeat(1,minmax(0,1fr))}@media (min-width:640px){.sm\:rounded-lg{border-radius:.5rem}.sm\:block{display:block}.sm\:items-center{align-items:center}.sm\:justify-start{justify-content:flex-start}.sm\:justify-between{justify-content:space-between}.sm\:h-20{height:5rem}.sm\:ml-0{margin-left:0}.sm\:px-6{padding-left:1.5rem;padding-right:1.5rem}.sm\:pt-0{padding-top:0}.sm\:text-left{text-align:left}.sm\:text-right{text-align:right}}@media (min-width:768px){.md\:border-t-0{border-top-width:0}.md\:border-l{border-left-width:1px}.md\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}}@media (min-width:1024px){.lg\:px-8{padding-left:2rem;padding-right:2rem}}@media (prefers-color-scheme:dark){.dark\:bg-gray-800{--bg-opacity:1;background-color:#2d3748;background-color:rgba(45,55,72,var(--bg-opacity))}.dark\:bg-gray-900{--bg-opacity:1;background-color:#1a202c;background-color:rgba(26,32,44,var(--bg-opacity))}.dark\:border-gray-700{--border-opacity:1;border-color:#4a5568;border-color:rgba(74,85,104,var(--border-opacity))}.dark\:text-white{--text-opacity:1;color:#fff;color:rgba(255,255,255,var(--text-opacity))}.dark\:text-gray-400{--text-opacity:1;color:#cbd5e0;color:rgba(203,213,224,var(--text-opacity))}}
-        </style>
+    <!-- preloader starts -->
+    <div class="dtr-preloader">
+        <div class="dtr-preloader-inner">
+            <div class="dtr-preloader-img"></div>
+        </div>
+    </div>
+    <!-- preloader ends -->
 
-        <style>
-            body {
-                font-family: 'Nunito', sans-serif;
-            }
-        </style>
-    </head>
-    <body class="antialiased">
-        <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
-            @if (Route::has('login'))
-                <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
-                    @auth
-                        <a href="{{ url('/home') }}" class="text-sm text-gray-700 underline">Home</a>
-                    @else
-                        <a href="{{ route('login') }}" class="text-sm text-gray-700 underline">Log in</a>
+    <!-- Small Devices Header
+============================================= -->
+    <div class="dtr-responsive-header fixed-top">
+        <div class="container">
 
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 underline">Register</a>
-                        @endif
-                    @endauth
+            <!-- small devices logo -->
+            <a href="index.html"> <h3> Stock Relief</h3></a>
+            <!-- small devices logo ends -->
+
+            <!-- menu button -->
+            <button id="dtr-menu-button" class="dtr-hamburger" type="button"><span class="dtr-hamburger-lines-wrapper"><span class="dtr-hamburger-lines"></span></span></button>
+        </div>
+        <div class="dtr-responsive-header-menu"></div>
+    </div>
+    <!-- Small Devices Header ends
+============================================= -->
+
+    <!-- Header
+============================================= -->
+    <header id="dtr-header-global" class="fixed-top">
+        <div class="container">
+            <div class="d-flex align-items-center justify-content-between">
+
+                <!-- header left starts -->
+                <div class="dtr-header-left">
+
+                    <!-- logo -->
+                    <a class="logo-default dtr-scroll-link" href="#home"><h3 style="color: whitesmoke;"> StockRelief</h3></a>
+
+                    <!-- logo on scroll -->
+                    <a class="logo-alt dtr-scroll-link" href="#home"> <h3> StockRelief</h3></a>
+                    <!-- logo on scroll ends -->
+
                 </div>
-            @endif
+                <!-- header left ends -->
 
-            <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
-                <div class="flex justify-center pt-8 sm:justify-start sm:pt-0">
-                    <svg viewBox="0 0 651 192" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-16 w-auto text-gray-700 sm:h-20">
-                        <g clip-path="url(#clip0)" fill="#EF3B2D">
-                            <path d="M248.032 44.676h-16.466v100.23h47.394v-14.748h-30.928V44.676zM337.091 87.202c-2.101-3.341-5.083-5.965-8.949-7.875-3.865-1.909-7.756-2.864-11.669-2.864-5.062 0-9.69.931-13.89 2.792-4.201 1.861-7.804 4.417-10.811 7.661-3.007 3.246-5.347 6.993-7.016 11.239-1.672 4.249-2.506 8.713-2.506 13.389 0 4.774.834 9.26 2.506 13.459 1.669 4.202 4.009 7.925 7.016 11.169 3.007 3.246 6.609 5.799 10.811 7.66 4.199 1.861 8.828 2.792 13.89 2.792 3.913 0 7.804-.955 11.669-2.863 3.866-1.908 6.849-4.533 8.949-7.875v9.021h15.607V78.182h-15.607v9.02zm-1.431 32.503c-.955 2.578-2.291 4.821-4.009 6.73-1.719 1.91-3.795 3.437-6.229 4.582-2.435 1.146-5.133 1.718-8.091 1.718-2.96 0-5.633-.572-8.019-1.718-2.387-1.146-4.438-2.672-6.156-4.582-1.719-1.909-3.032-4.152-3.938-6.73-.909-2.577-1.36-5.298-1.36-8.161 0-2.864.451-5.585 1.36-8.162.905-2.577 2.219-4.819 3.938-6.729 1.718-1.908 3.77-3.437 6.156-4.582 2.386-1.146 5.059-1.718 8.019-1.718 2.958 0 5.656.572 8.091 1.718 2.434 1.146 4.51 2.674 6.229 4.582 1.718 1.91 3.054 4.152 4.009 6.729.953 2.577 1.432 5.298 1.432 8.162-.001 2.863-.479 5.584-1.432 8.161zM463.954 87.202c-2.101-3.341-5.083-5.965-8.949-7.875-3.865-1.909-7.756-2.864-11.669-2.864-5.062 0-9.69.931-13.89 2.792-4.201 1.861-7.804 4.417-10.811 7.661-3.007 3.246-5.347 6.993-7.016 11.239-1.672 4.249-2.506 8.713-2.506 13.389 0 4.774.834 9.26 2.506 13.459 1.669 4.202 4.009 7.925 7.016 11.169 3.007 3.246 6.609 5.799 10.811 7.66 4.199 1.861 8.828 2.792 13.89 2.792 3.913 0 7.804-.955 11.669-2.863 3.866-1.908 6.849-4.533 8.949-7.875v9.021h15.607V78.182h-15.607v9.02zm-1.432 32.503c-.955 2.578-2.291 4.821-4.009 6.73-1.719 1.91-3.795 3.437-6.229 4.582-2.435 1.146-5.133 1.718-8.091 1.718-2.96 0-5.633-.572-8.019-1.718-2.387-1.146-4.438-2.672-6.156-4.582-1.719-1.909-3.032-4.152-3.938-6.73-.909-2.577-1.36-5.298-1.36-8.161 0-2.864.451-5.585 1.36-8.162.905-2.577 2.219-4.819 3.938-6.729 1.718-1.908 3.77-3.437 6.156-4.582 2.386-1.146 5.059-1.718 8.019-1.718 2.958 0 5.656.572 8.091 1.718 2.434 1.146 4.51 2.674 6.229 4.582 1.718 1.91 3.054 4.152 4.009 6.729.953 2.577 1.432 5.298 1.432 8.162 0 2.863-.479 5.584-1.432 8.161zM650.772 44.676h-15.606v100.23h15.606V44.676zM365.013 144.906h15.607V93.538h26.776V78.182h-42.383v66.724zM542.133 78.182l-19.616 51.096-19.616-51.096h-15.808l25.617 66.724h19.614l25.617-66.724h-15.808zM591.98 76.466c-19.112 0-34.239 15.706-34.239 35.079 0 21.416 14.641 35.079 36.239 35.079 12.088 0 19.806-4.622 29.234-14.688l-10.544-8.158c-.006.008-7.958 10.449-19.832 10.449-13.802 0-19.612-11.127-19.612-16.884h51.777c2.72-22.043-11.772-40.877-33.023-40.877zm-18.713 29.28c.12-1.284 1.917-16.884 18.589-16.884 16.671 0 18.697 15.598 18.813 16.884h-37.402zM184.068 43.892c-.024-.088-.073-.165-.104-.25-.058-.157-.108-.316-.191-.46-.056-.097-.137-.176-.203-.265-.087-.117-.161-.242-.265-.345-.085-.086-.194-.148-.29-.223-.109-.085-.206-.182-.327-.252l-.002-.001-.002-.002-35.648-20.524a2.971 2.971 0 00-2.964 0l-35.647 20.522-.002.002-.002.001c-.121.07-.219.167-.327.252-.096.075-.205.138-.29.223-.103.103-.178.228-.265.345-.066.089-.147.169-.203.265-.083.144-.133.304-.191.46-.031.085-.08.162-.104.25-.067.249-.103.51-.103.776v38.979l-29.706 17.103V24.493a3 3 0 00-.103-.776c-.024-.088-.073-.165-.104-.25-.058-.157-.108-.316-.191-.46-.056-.097-.137-.176-.203-.265-.087-.117-.161-.242-.265-.345-.085-.086-.194-.148-.29-.223-.109-.085-.206-.182-.327-.252l-.002-.001-.002-.002L40.098 1.396a2.971 2.971 0 00-2.964 0L1.487 21.919l-.002.002-.002.001c-.121.07-.219.167-.327.252-.096.075-.205.138-.29.223-.103.103-.178.228-.265.345-.066.089-.147.169-.203.265-.083.144-.133.304-.191.46-.031.085-.08.162-.104.25-.067.249-.103.51-.103.776v122.09c0 1.063.568 2.044 1.489 2.575l71.293 41.045c.156.089.324.143.49.202.078.028.15.074.23.095a2.98 2.98 0 001.524 0c.069-.018.132-.059.2-.083.176-.061.354-.119.519-.214l71.293-41.045a2.971 2.971 0 001.489-2.575v-38.979l34.158-19.666a2.971 2.971 0 001.489-2.575V44.666a3.075 3.075 0 00-.106-.774zM74.255 143.167l-29.648-16.779 31.136-17.926.001-.001 34.164-19.669 29.674 17.084-21.772 12.428-43.555 24.863zm68.329-76.259v33.841l-12.475-7.182-17.231-9.92V49.806l12.475 7.182 17.231 9.92zm2.97-39.335l29.693 17.095-29.693 17.095-29.693-17.095 29.693-17.095zM54.06 114.089l-12.475 7.182V46.733l17.231-9.92 12.475-7.182v74.537l-17.231 9.921zM38.614 7.398l29.693 17.095-29.693 17.095L8.921 24.493 38.614 7.398zM5.938 29.632l12.475 7.182 17.231 9.92v79.676l.001.005-.001.006c0 .114.032.221.045.333.017.146.021.294.059.434l.002.007c.032.117.094.222.14.334.051.124.088.255.156.371a.036.036 0 00.004.009c.061.105.149.191.222.288.081.105.149.22.244.314l.008.01c.084.083.19.142.284.215.106.083.202.178.32.247l.013.005.011.008 34.139 19.321v34.175L5.939 144.867V29.632h-.001zm136.646 115.235l-65.352 37.625V148.31l48.399-27.628 16.953-9.677v33.862zm35.646-61.22l-29.706 17.102V66.908l17.231-9.92 12.475-7.182v33.841z"/>
-                        </g>
-                    </svg>
+                <!-- menu starts-->
+                <div class="main-navigation navbar navbar-expand-lg ml-auto">
+                    <ul class="dtr-scrollspy navbar-nav dtr-nav light-nav-on-load dark-nav-on-scroll">
+                        <li class="nav-item"> <a class="nav-link active" href="#home">Home</a> </li>
+                        <li class="nav-item"> <a class="nav-link" href="#features">How It Works</a> </li>
+                        <li class="nav-item"> <a class="nav-link" href="#plans">Plans</a> </li>
+                        <li class="nav-item"> <a class="nav-link" href="#faq">FAQ</a> </li>
+                        <li class="nav-item"> <a class="nav-link" href="#blog">Blog</a> </li>
+                        <li class="nav-item"> <a class="nav-link" href="#contact">Contact</a> </li>
+                    </ul>
                 </div>
+                <!-- menu ends-->
 
-                <div class="mt-8 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg">
-                    <div class="grid grid-cols-1 md:grid-cols-2">
-                        <div class="p-6">
-                            <div class="flex items-center">
-                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8 text-gray-500"><path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
-                                <div class="ml-4 text-lg leading-7 font-semibold"><a href="https://laravel.com/docs" class="underline text-gray-900 dark:text-white">Documentation</a></div>
-                            </div>
+                <!-- header right starts -->
+                <div class="dtr-header-right"> <a href="#plans" class="dtr-btn btn-white btn-accent-on-scroll dtr-scroll-link dtr-px-50">Try for Free + </a> </div>
+                <!-- header right ends -->
 
-                            <div class="ml-12">
-                                <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                    Laravel has wonderful, thorough documentation covering every aspect of the framework. Whether you are new to the framework or have previous experience with Laravel, we recommend reading all of the documentation from beginning to end.
-                                </div>
-                            </div>
-                        </div>
+            </div>
+        </div>
+    </header>
+    <!-- header ends
+================================================== -->
 
-                        <div class="p-6 border-t border-gray-200 dark:border-gray-700 md:border-t-0 md:border-l">
-                            <div class="flex items-center">
-                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8 text-gray-500"><path d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"></path><path d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
-                                <div class="ml-4 text-lg leading-7 font-semibold"><a href="https://laracasts.com" class="underline text-gray-900 dark:text-white">Laracasts</a></div>
-                            </div>
+    <!-- == main content area starts == -->
+    <div id="dtr-main-content">
+        <!-- hero section starts
+================================================== -->
+        <section id="home" class="dtr-section dtr-section-with-bg" style="background-image: url(https://cdn.pixabay.com/photo/2015/03/26/10/41/apple-691798_1280.jpg);">
+            <div class="container hero-section-top-padding dtr-full-stretch">
+                <!-- row starts -->
+                <div class="row dtr-py-100">
 
-                            <div class="ml-12">
-                                <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                    Laracasts offers thousands of video tutorials on Laravel, PHP, and JavaScript development. Check them out, see for yourself, and massively level up your development skills in the process.
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="p-6 border-t border-gray-200 dark:border-gray-700">
-                            <div class="flex items-center">
-                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8 text-gray-500"><path d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"></path></svg>
-                                <div class="ml-4 text-lg leading-7 font-semibold"><a href="https://laravel-news.com/" class="underline text-gray-900 dark:text-white">Laravel News</a></div>
-                            </div>
-
-                            <div class="ml-12">
-                                <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                    Laravel News is a community driven portal and newsletter aggregating all of the latest and most important news in the Laravel ecosystem, including new package releases and tutorials.
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="p-6 border-t border-gray-200 dark:border-gray-700 md:border-l">
-                            <div class="flex items-center">
-                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8 text-gray-500"><path d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                                <div class="ml-4 text-lg leading-7 font-semibold text-gray-900 dark:text-white">Vibrant Ecosystem</div>
-                            </div>
-
-                            <div class="ml-12">
-                                <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                    Laravel's robust library of first-party tools and libraries, such as <a href="https://forge.laravel.com" class="underline">Forge</a>, <a href="https://vapor.laravel.com" class="underline">Vapor</a>, <a href="https://nova.laravel.com" class="underline">Nova</a>, and <a href="https://envoyer.io" class="underline">Envoyer</a> help you take your projects to the next level. Pair them with powerful open source libraries like <a href="https://laravel.com/docs/billing" class="underline">Cashier</a>, <a href="https://laravel.com/docs/dusk" class="underline">Dusk</a>, <a href="https://laravel.com/docs/broadcasting" class="underline">Echo</a>, <a href="https://laravel.com/docs/horizon" class="underline">Horizon</a>, <a href="https://laravel.com/docs/sanctum" class="underline">Sanctum</a>, <a href="https://laravel.com/docs/telescope" class="underline">Telescope</a>, and more.
-                                </div>
-                            </div>
-                        </div>
+                    <!-- column 1 starts -->
+                    <div class="col-12 col-lg-6 dtr-py-100 hero-text-fixed-width">
+                        <h1 class="color-white">An Inventory Software that doesn't suck</h1>
+                        <p class="text-size-md dtr-mt-30 color-white">Let's face it, most inventory softwares out there suck and lack a lot of essential features you'd want in your business. If it wasn't lacking an invoicing system, it wasn't cloud-based and as a result, could not be used in multiple outlets. </p>
+                        <p class="text-size-md color-white">That sucks right? We felt the same way too... for a long time in fact, until we decided to f*ck it all, got our hands dirty and built one that actually get's the whole work done, while staying ever reliant and portable!</p>
+                        <a href="#plans" class="dtr-btn btn-white dtr-scroll-link dtr-px-70 dtr-mt-20">Look, Give it a try!</a>
+                        <p class="color-white dtr-mt-5">(No credit card bullsh*t required)</p>
                     </div>
+                    <!-- column 1 ends -->
+
+                    <!-- column 2 starts -->
+                    <div class="col-12 col-lg-6 dtr-section-with-bg dtr-bg-position-center-left" style="background-image: url(assets/images/hero-img-mac.png);"> </div>
+                    <!-- column 2 ends -->
+
                 </div>
+                <!-- row ends -->
+            </div>
+        </section>
+        <!-- hero section ends
+================================================== -->
 
-                <div class="flex justify-center mt-4 sm:items-center sm:justify-between">
-                    <div class="text-center text-sm text-gray-500 sm:text-left">
-                        <div class="flex items-center">
-                            <svg fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor" class="-mt-px w-5 h-5 text-gray-400">
-                                <path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path>
-                            </svg>
+        <!-- logo slider section starts
+================================================== -->
+        <section class="dtr-section dtr-md-mx-20 dtr-border-y border-grey dtr-py-50">
 
-                            <a href="https://laravel.bigcartel.com" class="ml-1 underline">
-                                Shop
-                            </a>
-
-                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="ml-4 -mt-px w-5 h-5 text-gray-400">
-                                <path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
-                            </svg>
-
-                            <a href="https://github.com/sponsors/taylorotwell" class="ml-1 underline">
-                                Sponsor
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="ml-4 text-center text-sm text-gray-500 sm:text-right sm:ml-0">
-                        Laravel v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})
+            <!-- row starts -->
+            <div class="row">
+                <div class="col-12">
+                    <div class="dtr-slick-slider dtr-logo-carousel">
+                        <!-- logo 1 -->
+                        <div> <img src="assets/images/client-1.png" alt="image"> </div>
+                        <!-- logo 2 -->
+                        <div> <img src="assets/images/client-2.png" alt="image"> </div>
+                        <!-- logo 3 -->
+                        <div> <img src="assets/images/client-3.png" alt="image"> </div>
+                        <!-- logo 4 -->
+                        <div> <img src="assets/images/client-4.png" alt="image"> </div>
+                        <!-- logo 5 -->
+                        <div> <img src="assets/images/client-5.png" alt="image"> </div>
+                        <!-- logo 6 -->
+                        <div> <img src="assets/images/client-6.png" alt="image"> </div>
+                        <!-- logo 7 -->
+                        <div> <img src="assets/images/client-4.png" alt="image"> </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </body>
+            <!-- row ends -->
+
+        </section>
+        <!-- logo slider section ends
+================================================== -->
+
+        <!-- section starts
+================================================== -->
+        <section id="features" class="dtr-section dtr-py-80">
+            <div class="container">
+
+                <!-- row 1 starts -->
+                <div class="row">
+
+                    <!-- column 1 starts -->
+                    <div class="col-12 col-md-5 dtr-mt-20">
+                        <h2 class="color-green">Setup your own inventory app <br>
+                            with just a few clicks</h2>
+                        <p>Purchase a plan, we help customize to your needs and voila! You're set to start running your business a lot smoother!</p>
+                        <a href="#" class="dtr-btn btn-green dtr-mt-20">Discover</a> </div>
+                    <!-- column 1 ends -->
+
+                    <!-- column 2 starts -->
+                    <div class="col-12 col-md-6 offset-md-1 dtr-sm-mt-30 wow fadeInRight"> <img src="assets/images/screen-1.png" alt="image"> </div>
+                    <!-- column 2 ends -->
+
+                </div>
+                <!-- row 1 ends -->
+
+                <!-- row 2 starts -->
+                <div class="row dtr-my-80">
+
+                    <!-- column 1 starts -->
+                    <div class="col-12 col-md-6 wow fadeInLeft"> <img src="assets/images/screen-2.png" alt="image"> </div>
+                    <!-- column 1 ends -->
+
+                    <!-- column 2 starts -->
+                    <div class="col-12 col-md-5 offset-md-1 dtr-mt-20">
+                        <h2 class="color-green">Own your data<br>
+                            all of it!</h2>
+                        <p>If you haven't gotten the memo yet, Stockrelief is in its true form, a script we help setup in a server of your choosing. You own the server and everything associated once you purchase a plan with us.</p>
+                        <p>No of course we wouldn't want put you through the stress of setting up a server. You only have to purchase a plan that suits your business and our experts handle everything regarding setup and maintenance from there.</p>
+                        <a href="#" class="dtr-btn btn-green dtr-mt-20">Discover</a> </div>
+                    <!-- column 2 ends -->
+
+                </div>
+                <!-- row 2 ends -->
+
+                <!-- row 3 starts -->
+                <div class="row">
+
+                    <!-- column 1 starts -->
+                    <div class="col-12 col-md-5 dtr-mt-20">
+                        <h2 class="color-green">Say Goodbye <br>
+                            to heavy accounting costs</h2>
+                        <p>Every smart business needs to measure profit and balance books. Stockrelief does all of that and more for you. Whether you need to see last week's total sales or the item that sold the most 7 months ago, StockRelief has you covered with it's excellent reporting and tracking system.</p>
+                        <a href="#" class="dtr-btn btn-green dtr-mt-20">Discover</a> </div>
+                    <!-- column 1 ends -->
+
+                    <!-- column 2 starts -->
+                    <div class="col-12 col-md-6 offset-md-1 dtr-sm-mt-30 wow fadeInRight"> <img src="assets/images/screen-3.png" alt="image"> </div>
+                    <!-- column 2 ends -->
+
+                </div>
+                <!-- row 3 ends -->
+
+            </div>
+        </section>
+        <!-- section ends
+================================================== -->
+
+        <!-- boxed feature section starts
+================================================== -->
+        <section class="dtr-section dtr-pt-100 dtr-pb-70 dtr-section-with-bg bg-light-blue parallax" style="background-image: url(assets/images/section-bg1.png);">
+            <div class="container">
+
+                <!-- row starts -->
+                <div class="row">
+
+                    <!-- column 1 starts -->
+                    <div class="col-12 col-md-4">
+                        <!-- feature starts -->
+                        <div class="dtr-feature dtr-feature-top feature-has-box feature-has-shadow dtr-rounded-corner-xl text-center bg-white">
+                            <div class="dtr-feature-img"> <img src="assets/images/shape-icon1.png" alt="image"> </div>
+                            <div class="dtr-feature-content">
+                                <h3>We Source</h3>
+                                <p class="text-size-lg">Quality materials </p>
+                                <p>There are many variations of passages of lorem ipsum dolor amet available.</p>
+                                <a href="#" class="dtr-styled-link font-weight-600 color-green">Learn More</a> </div>
+                        </div>
+                        <!-- feature ends -->
+
+                    </div>
+                    <!-- column 1 ends -->
+
+                    <!-- column 2 starts -->
+                    <div class="col-12 col-md-4">
+
+                        <!-- feature starts -->
+                        <div class="dtr-feature dtr-feature-top feature-has-box feature-has-shadow dtr-rounded-corner-xl text-center bg-white">
+                            <div class="dtr-feature-img"> <img src="assets/images/shape-icon2.png" alt="image"> </div>
+                            <div class="dtr-feature-content">
+                                <h3>We Brand</h3>
+                                <p class="text-size-lg">Excellent Whitelabeling</p>
+                                <p>There are many variations of passages of lorem ipsum dolor amet available.</p>
+                                <a href="#" class="dtr-styled-link font-weight-600 color-green">Learn More</a> </div>
+                        </div>
+                        <!-- feature ends -->
+
+                    </div>
+                    <!-- column 2 ends -->
+
+                    <!-- column 3 starts -->
+                    <div class="col-12 col-md-4">
+
+                        <!-- feature starts -->
+                        <div class="dtr-feature dtr-feature-top feature-has-box feature-has-shadow dtr-rounded-corner-xl text-center bg-white">
+                            <div class="dtr-feature-img"> <img src="assets/images/shape-icon3.png" alt="image"> </div>
+                            <div class="dtr-feature-content">
+                                <h3>We Deliver</h3>
+                                <p class="text-size-lg">Fast shipping</p>
+                                <p>There are many variations of passages of lorem ipsum dolor amet available.</p>
+                                <a href="#" class="dtr-styled-link font-weight-600 color-green">Learn More</a> </div>
+                        </div>
+                        <!-- feature ends -->
+
+                    </div>
+                    <!-- column 3 ends -->
+
+                </div>
+                <!-- row ends -->
+
+            </div>
+        </section>
+        <!-- boxed feature section ends
+================================================== -->
+
+        <!-- video section starts
+================================================== -->
+        <section class="dtr-section dtr-py-100">
+            <div class="container">
+
+                <!-- section intro row starts -->
+                <div class="row dtr-mb-50">
+                    <div class="col-12 text-center">
+                        <h2>Why is StockRelief different?</h2>
+                        <div class="dtr-styled-divider divider-center bg-light-green"></div>
+                    </div>
+                </div>
+                <!-- section intro row ends -->
+
+                <!-- row starts -->
+                <div class="row d-flex align-items-center">
+
+                    <!-- column 1 starts -->
+                    <div class="col-12 col-md-5">
+                        <div class="dtr-pr-40 dtr-sm-pr-0">
+
+                            <!-- feature 1 starts -->
+                            <div class="dtr-line-feature dtr-mb-10">
+                                <div class="dtr-line-feature-img-wrapper">
+                                    <div class="dtr-line-feature-img bg-green border-light-green color-white"><i class="icon-user-edit"></i></div>
+                                </div>
+                                <div class="dtr-vert-border border-light-green"></div>
+                                <h4 class="dtr-line-feature-heading font-weight-600">Developer-first coding </h4>
+                                <p>There are many variations of passages of lorem available.</p>
+                            </div>
+                            <!-- feature 1 ends -->
+
+                            <!-- feature 2 starts -->
+                            <div class="dtr-line-feature dtr-mb-10">
+                                <div class="dtr-line-feature-img-wrapper">
+                                    <div class="dtr-line-feature-img bg-green border-light-green color-white"><i class="icon-mail-bulk"></i></div>
+                                </div>
+                                <div class="dtr-vert-border border-light-green"></div>
+                                <h4 class="dtr-line-feature-heading font-weight-600">Own your data, and your interface too :)</h4>
+                                <p>Nemo enim ipsam voluptatem quia voluptas sit.</p>
+                            </div>
+                            <!-- feature 2 ends -->
+
+                            <!-- feature 3 starts -->
+                            <div class="dtr-line-feature">
+                                <div class="dtr-line-feature-img-wrapper">
+                                    <div class="dtr-line-feature-img bg-green border-light-green color-white"><i class="icon-shipping-fast"></i></div>
+                                </div>
+                                <div class="dtr-vert-border border-light-green"></div>
+                                <h4 class="dtr-line-feature-heading font-weight-600">Automate Everything!</h4>
+                                <p>Remove the need for manual work with tons of automated workflows that will relieve you time, and save your business money!</p>
+                            </div>
+                            <!-- feature 3 ends -->
+
+                        </div>
+                    </div>
+                    <!-- column 1 starts -->
+
+                    <!-- column 2 starts -->
+                    <div class="col-12 col-md-7 dtr-md-mt-30">
+
+                        <!-- video box starts -->
+                        <div class="dtr-video-box">
+
+                            <!-- image -->
+                            <img src="assets/images/video-bg.jpg" alt="image">
+
+                            <!-- video button starts -->
+                            <a class="dtr-video-popup dtr-video-button bg-green color-white" data-autoplay="true" data-vbtype="video" href="https://www.youtube.com/watch?v=kuceVNBTJio"></a>
+                            <!-- video button ends -->
+
+                        </div>
+                        <!-- video box ends -->
+
+                    </div>
+                    <!-- column 2 ends -->
+
+                </div>
+                <!-- row ends -->
+
+            </div>
+        </section>
+        <!-- video section ends
+================================================== -->
+
+        <!-- pricing section ends
+================================================== -->
+        <section id="plans" class="dtr-section dtr-py-100 bg-light-blue parallax" style="background-image: url(assets/images/section-bg2.png);">
+            <div class="container">
+
+                <!-- section intro row starts -->
+                <div class="row dtr-mb-80">
+                    <div class="col-12 text-center">
+                        <h2>Plans and pricing</h2>
+                        <p>Our pricing scales with you and your needs. Try out a test installation for free. No credit card required.</p>
+                        <div class="dtr-styled-divider divider-center bg-light-green"></div>
+                    </div>
+                </div>
+                <!-- section intro row ends -->
+
+                <!-- row starts -->
+                <div class="row">
+
+                    <!-- column 1 starts -->
+                    <div class="col-12 col-md-4 dtr-pr-0 dtr-md-pr-15">
+
+                        <!-- pricing 1 starts -->
+                        <div class="dtr-pricing bg-light-green">
+                            <div class="dtr-pricing-img"><img src="assets/images/ptable-icon1.png" alt="image"></div>
+                            <h3>SME Plan</h3>
+                            <p class="dtr-price color-green"><sup>$</sup>120</p>
+                            <p class="dtr-m-0">per Year</p>
+                            <a href="#" class="dtr-btn btn-green dtr-my-30"> Take a test run</a>
+                            <p class="text-size-md font-weight-600 color-green">Free Forever</p>
+                            <ul class="dtr-list-block">
+                                <li>Unlimited Products</li>
+                                <li>Unlimited Records</li>
+                                <li>Up to 20gb of storage space</li>
+                                <li>Monthly Backups</li>
+                                <li>Up to 6 months of backup history</li>
+                                <li>Custom user interface</li>
+                            </ul>
+                        </div>
+                        <!-- pricing 1 ends -->
+
+                    </div>
+                    <!-- column 1 ends -->
+
+                    <!-- column 2 starts -->
+                    <div class="col-12 col-md-4 dtr-px-0 dtr-md-px-15">
+
+                        <!-- pricing 2 starts -->
+                        <div class="dtr-pricing pricing-focused bg-dark-blue">
+                            <div class="dtr-pricing-tagline-wrapper">
+                                <div class="dtr-pricing-tagline color-green">Most Popular</div>
+                            </div>
+                            <div class="dtr-pricing-img"><img src="assets/images/ptable-icon2.png" alt="image"></div>
+                            <h3 class="color-white">Corporate Plan</h3>
+                            <p class="dtr-price color-green"><sup>$</sup> 255</p>
+                            <p class="dtr-m-0 color-white">per year</p>
+                            <a href="#" class="dtr-btn btn-white dtr-my-30">Signup for free</a>
+                            <p class="text-size-md font-weight-600 color-green">Free Forever</p>
+                            <ul class="dtr-list-block color-white">
+                                <li>Unlimited Products</li>
+                                <li>Unlimited Records</li>
+                                <li>Up to 50gb of storage space</li>
+                                <li>Bi-weekly Backups</li>
+                                <li>Up to a year of backup history</li>
+                                <li>Custom user interface</li>
+                            </ul>
+                        </div>
+                        <!-- pricing 2 ends -->
+
+                    </div>
+                    <!-- column 2 ends -->
+
+                    <!-- column 3 starts -->
+                    <div class="col-12 col-md-4 dtr-pl-0 dtr-md-pl-15">
+
+                        <!-- pricing 3 starts -->
+                        <div class="dtr-pricing bg-light-green">
+                            <div class="dtr-pricing-img"><img src="assets/images/ptable-icon3.png" alt="image"></div>
+                            <h3>Multi-National Plan</h3>
+                            <p class="dtr-price color-green"><sup>$</sup>900</p>
+                            <p class="dtr-m-0">per year</p>
+                            <a href="#" class="dtr-btn btn-green dtr-my-30">Signup for free</a>
+                            <p class="text-size-md font-weight-600 color-green">Free Forever</p>
+                            <ul class="dtr-list-block">
+                                <li>Unlimited Products</li>
+                                <li>Unlimited Records</li>
+                                <li>Up to 160gb of storage space</li>
+                                <li>Weekly Backups</li>
+                                <li>Up to 3 years of backup history</li>
+                                <li>Custom user interface</li>
+                            </ul>
+                        </div>
+                        <!-- pricing 3 ends -->
+
+                    </div>
+                    <!-- column 3 ends -->
+
+                </div>
+                <!-- row ends -->
+
+            </div>
+        </section>
+        <!-- pricing section ends
+================================================== -->
+
+        <!-- faq section starts
+================================================== -->
+        <section id="faq" class="dtr-section dtr-py-100">
+            <div class="container">
+                <h3 class="color-green dtr-mb-40">Frequently asked questions</h3>
+                <!-- row 1 starts -->
+                <div class="row">
+
+                    <!-- column 1 starts -->
+                    <div class="col-12 col-md-6">
+
+                        <!-- faq item starts -->
+                        <div class="faq-item">
+                            <h4 class="faq-heading">Can I integrate my enterprise software with StockRelief? </h4>
+                            <div class="faq-content">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.</div>
+                        </div>
+                        <!-- faq item ends -->
+
+                        <!-- faq item starts -->
+                        <div class="faq-item">
+                            <h4 class="faq-heading">If I invite my suppliers or customers to StockRelief, do I have to pay for their accounts? </h4>
+                            <div class="faq-content">It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages.</div>
+                        </div>
+                        <!-- faq item ends -->
+
+                        <!-- faq item starts -->
+                        <div class="faq-item dtr-mb-0">
+                            <h4 class="faq-heading">Will my accountant(s) hate me for buying a subscription? </h4>
+                            <div class="faq-content">To be honest, that would depend on whether he/she is one who really enjoys the stress associated with punching a calculator 40 hours a week or one who would welcome the idea of having all their work automatically done for them. </div>
+                        </div>
+                        <!-- faq item ends -->
+
+                    </div>
+                    <!-- column 1 ends -->
+
+                    <!-- column 2 starts -->
+                    <div class="col-12 col-md-6">
+
+                        <!-- faq item starts -->
+                        <div class="faq-item">
+                            <h4 class="faq-heading">Can I install StockRelief on my own hardware? </h4>
+                            <div class="faq-content">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque. </div>
+                        </div>
+                        <!-- faq item ends -->
+
+                        <!-- faq item starts -->
+                        <div class="faq-item">
+                            <h4 class="faq-heading">How can I obtain a copy of my data? </h4>
+                            <div class="faq-content">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour. </div>
+                        </div>
+                        <!-- faq item ends -->
+
+                        <!-- faq item starts -->
+                        <div class="faq-item">
+                            <h4 class="faq-heading">How safe is my data? </h4>
+                            <div class="faq-content">Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. </div>
+                        </div>
+                        <!-- faq item ends -->
+
+                    </div>
+                    <!-- column 2 ends -->
+
+                </div>
+                <!-- row 1 ends -->
+
+                <!-- row 2 starts -->
+                <div class="dtr-cta-box dtr-rounded-corner-xl dtr-shadow  dtr-mt-100 bg-white">
+                    <div class="row d-flex">
+                        <!-- column 1 starts -->
+                        <div class="col-12 col-md-5 align-self-end"> <img src="assets/images/cta-img.png" alt="image"> </div>
+                        <!-- column 1 ends -->
+                        <!-- column 2 starts -->
+                        <div class="col-12 col-md-7 text-center dtr-py-50 dtr-px-60">
+                            <h3 class="color-green">Get started with StockRelief</h3>
+                            <p class="text-size-md">Access our guide and discover everything your<br>
+                                company needs to become compliant.</p>
+                            <a href="#" class="dtr-btn btn-green dtr-mt-20">Book a demo</a> </div>
+                        <!-- column 2 ends -->
+
+                    </div>
+                </div>
+                <!-- row 2 ends -->
+
+            </div>
+        </section>
+        <!-- faq section ends
+================================================== -->
+
+        <!-- team section starts
+================================================== -->
+        <section class="dtr-section dtr-py-100 bg-light-blue parallax" style="background-image: url(assets/images/section-bg1.png);">
+            <div class="container">
+
+                <!-- section intro row starts -->
+                <div class="row dtr-mb-50">
+                    <div class="col-12 text-center">
+                        <h2>Our Team</h2>
+                        <div class="dtr-styled-divider divider-center bg-light-green"></div>
+                    </div>
+                </div>
+                <!-- section intro row ends -->
+
+                <!-- row starts -->
+                <div class="row">
+
+                    <!-- column 1 starts -->
+                    <div class="col-12 col-md-4">
+
+                        <!-- member 1 starts -->
+                        <div class="dtr-team team-has-shadow text-center bg-white">
+                            <div class="dtr-team-img"> <img src="assets/images/member-1.jpg" alt="image"> </div>
+                            <div class="dtr-team-content">
+                                <div class="dtr-social-circle dtr-team-social-overlap">
+                                    <ul class="dtr-social dtr-social-list">
+                                        <li><a href="#" class="dtr-twitter" target="_blank" title="twitter"></a></li>
+                                        <li><a href="#" class="dtr-google" target="_blank" title="facebook"></a></li>
+                                    </ul>
+                                </div>
+                                <h4 class="dtr-mb-5">Oluwaseun Afolayan</h4>
+                                <p class="dtr-mb-5">Project Lead</p>
+                                <p>SaaS Applications</p>
+                            </div>
+                        </div>
+                        <!-- member 1 ends -->
+
+                    </div>
+                    <!-- column 1 ends -->
+
+                    <!-- column 2 starts -->
+                    <div class="col-12 col-md-4">
+
+                        <!-- member 2 starts -->
+                        <div class="dtr-team team-has-shadow text-center bg-white">
+                            <div class="dtr-team-img"> <img src="assets/abbey.png" alt="image"> </div>
+                            <div class="dtr-team-content">
+                                <div class="dtr-social-circle dtr-team-social-overlap">
+                                    <ul class="dtr-social dtr-social-list">
+                                        <li><a href="#" class="dtr-twitter" target="_blank" title="twitter"></a></li>
+                                        <li><a href="#" class="dtr-google" target="_blank" title="facebook"></a></li>
+                                    </ul>
+                                </div>
+                                <h4 class="dtr-mb-5">Isaac Somto</h4>
+                                <p class="dtr-mb-5">Lead Designer </p>
+                                <p>StockRelief Web Pro Apps</p>
+                            </div>
+                        </div>
+                        <!-- member 2 ends -->
+
+                    </div>
+                    <!-- column 2 ends -->
+
+                    <!-- column 3 starts -->
+                    <div class="col-12 col-md-4">
+
+                        <!-- member 3 starts -->
+                        <div class="dtr-team team-has-shadow text-center bg-white">
+                            <div class="dtr-team-img"> <img src="assets/images/member-3.jpg" alt="image"> </div>
+                            <div class="dtr-team-content">
+                                <div class="dtr-social-circle dtr-team-social-overlap">
+                                    <ul class="dtr-social dtr-social-list">
+                                        <li><a href="#" class="dtr-twitter" target="_blank" title="twitter"></a></li>
+                                        <li><a href="#" class="dtr-google" target="_blank" title="facebook"></a></li>
+                                    </ul>
+                                </div>
+                                <h4 class="dtr-mb-5">Adebola Makinde</h4>
+                                <p class="dtr-mb-5">Customer success Officer</p>
+                                <p>Adobe Suite Expert</p>
+                            </div>
+                        </div>
+                        <!-- member 3 ends -->
+
+                    </div>
+                    <!-- column 3 ends -->
+
+                </div>
+                <!-- row ends -->
+
+            </div>
+        </section>
+        <!-- team section ends
+================================================== -->
+
+        <!-- tabs section starts
+================================================== -->
+        <section class="dtr-section dtr-py-100">
+            <div class="container">
+
+                <!-- section intro row starts -->
+                <div class="row dtr-mb-30">
+                    <div class="col-12 text-center">
+                        <h2>How it works?</h2>
+                        <p>Just 3 simple steps to start using StockRelief.</p>
+                        <div class="dtr-styled-divider divider-center bg-light-green"></div>
+                    </div>
+                </div>
+                <!-- section intro row ends -->
+
+                <!-- tabs starts -->
+                <div class="row d-flex align-items-center dtr-features-tab">
+
+                    <!-- left column starts -->
+                    <div class="col-12 col-md-6">
+                        <div class="tab-content" id="v-pills-tabContent">
+
+                            <!-- tab 1 -->
+                            <div class="tab-pane fade" id="features-tab-1" role="tabpanel" aria-labelledby="features-tab-1-tab"> <img src="assets/images/screen-1.png" alt="image"> </div>
+                            <!-- tab 2 -->
+                            <div class="tab-pane fade show active" id="features-tab-2" role="tabpanel" aria-labelledby="features-tab-2-tab"><img src="assets/images/screen-2.png" alt="image"></div>
+                            <!-- tab 3 -->
+                            <div class="tab-pane fade" id="features-tab-3" role="tabpanel" aria-labelledby="features-tab-3-tab"><img src="assets/images/screen-3.png" alt="image"></div>
+                        </div>
+                    </div>
+                    <!-- left column ends -->
+
+                    <!-- right (nav) column starts -->
+                    <div class="col-12 col-md-6">
+                        <div class="nav flex-column nav-pills" role="tablist" aria-orientation="vertical">
+
+                            <!-- tab 1 content starts -->
+                            <a class="nav-link" id="features-tab-1-tab" data-toggle="pill" href="#features-tab-1" role="tab" aria-controls="features-tab-1" aria-selected="false">
+                            <h4 class="font-weight-600">Tell us your needs</h4>
+                            <p>There are many variations of passages of lorem ipsum dolor amet available.</p>
+                            </a>
+                            <!-- tab 1 content ends -->
+
+                            <!-- tab 2 content starts -->
+                            <a class="nav-link active" id="features-tab-2-tab" data-toggle="pill" href="#features-tab-2" role="tab" aria-controls="features-tab-2" aria-selected="true">
+                            <h4 class="font-weight-600">We customize the software according to your needs</h4>
+                            <p>There are many variations of passages of lorem ipsum dolor amet available.</p>
+                            </a>
+                            <!-- tab 2 content ends -->
+
+                            <!-- tab 3 content starts -->
+                            <a class="nav-link" id="features-tab-3-tab" data-toggle="pill" href="#features-tab-3" role="tab" aria-controls="features-tab-3" aria-selected="false">
+                            <h4 class="font-weight-600">Start rolling with ease!</h4>
+                            <p>Once the app has been customized to your needs, It's ready to start usage. Say Goodbye to the stress associated with manual inventory taking with our affordable plans</p>
+                            </a>
+                            <!-- tab 3 content ends -->
+
+                        </div>
+                    </div>
+                    <!-- right (nav) column ends -->
+
+                </div>
+                <!-- tabs starts -->
+
+            </div>
+        </section>
+        <!-- tabs section ends
+================================================== -->
+
+        <!-- testimonial section starts
+================================================== -->
+        <section id="reviews" class="dtr-section dtr-md-mx-20 dtr-py-100 bg-green">
+
+            <!-- heading-->
+            <h3 class="text-center dtr-mb-50 color-white">Trusted by over 10,000 companies</h3>
+
+            <!--===== testimonial slider starts =====-->
+            <div class="dtr-slick-slider dtr-testimonial-style1 dtr-testimonial-boxed">
+
+                <!--== slide 1 starts ==-->
+                <div class="dtr-testimonial dtr-rounded-corner-xl bg-white">
+
+                    <!-- review text -->
+                    <div class="dtr-testimonial-content">“StockRelief app platform is incredibly
+                        simple to use.” </div>
+                    <!-- client info -->
+                    <div class="dtr-client-info">
+                        <div class="dtr-testimonial-user"> <img src="assets/images/review-user1.png" alt="image"> </div>
+                        <div class="dtr-testimonial-user-info">
+                            <h6 class="dtr-client-name">Christian Brown</h6>
+                            <span class="dtr-client-job">Entrepreneur, LA</span> </div>
+                    </div>
+                    <!-- client info ends -->
+                </div>
+                <!--== slide 1 ends ==-->
+
+                <!--== slide 2 starts ==-->
+                <div class="dtr-testimonial dtr-rounded-corner-xl bg-white">
+
+                    <!-- review text -->
+                    <div class="dtr-testimonial-content">“Giving a five star review was
+                        the easiest thing I've done in a while.” </div>
+                    <!-- client info -->
+                    <div class="dtr-client-info">
+                        <div class="dtr-testimonial-user"> <img src="assets/images/review-user2.png" alt="image"> </div>
+                        <div class="dtr-testimonial-user-info">
+                            <h6 class="dtr-client-name">Mike Anderson</h6>
+                            <span class="dtr-client-job">Project Admin, NY</span> </div>
+                    </div>
+                    <!-- client info ends -->
+                </div>
+                <!--== slide 2 ends ==-->
+
+                <!--== slide 3 starts ==-->
+                <div class="dtr-testimonial dtr-rounded-corner-xl bg-white">
+
+                    <!-- review text -->
+                    <div class="dtr-testimonial-content">“I am using StockRelief app for more than 25 years.” </div>
+                    <!-- client info -->
+                    <div class="dtr-client-info">
+                        <div class="dtr-testimonial-user"> <img src="assets/images/review-user1.png" alt="image"> </div>
+                        <div class="dtr-testimonial-user-info">
+                            <h6 class="dtr-client-name">Steven Gray</h6>
+                            <span class="dtr-client-job">Web Developer, Ohio</span> </div>
+                    </div>
+                    <!-- client info ends -->
+                </div>
+                <!--== slide 3 ends ==-->
+
+                <!--== slide 4 starts ==-->
+                <div class="dtr-testimonial dtr-rounded-corner-xl bg-white">
+
+                    <!-- review text -->
+                    <div class="dtr-testimonial-content">“I am using StockRelief app for more than 25 years.” </div>
+                    <!-- client info -->
+                    <div class="dtr-client-info">
+                        <div class="dtr-testimonial-user"> <img src="assets/images/review-user2.png" alt="image"> </div>
+                        <div class="dtr-testimonial-user-info">
+                            <h6 class="dtr-client-name">Matt Weiner</h6>
+                            <span class="dtr-client-job">UI Developer, Australia</span> </div>
+                    </div>
+                    <!-- client info ends -->
+                </div>
+                <!--== slide 4 ends ==-->
+
+            </div>
+            <!--===== testimonial slider ends =====-->
+
+        </section>
+        <!-- testimonial section ends
+================================================== -->
+
+        <!-- news section starts
+================================================== -->
+        <section id="blog" class="dtr-section dtr-py-100 bg-light-blue parallax" style="background-image: url(assets/images/section-bg2.png);">
+            <div class="container">
+
+                <!-- section intro row starts -->
+                <div class="row dtr-mb-50">
+                    <div class="col-12 text-center">
+                        <h2>From the blog</h2>
+                        <div class="dtr-styled-divider divider-center bg-light-green"></div>
+                    </div>
+                </div>
+                <!-- section intro row ends -->
+
+                <!-- row starts -->
+                <div class="row">
+
+                    <!-- column 1 starts -->
+                    <div class="col-12 col-md-4">
+
+                        <!-- blog item 1 starts -->
+                        <div class="dtr-blog-item dtr-shadow">
+                            <!-- image -->
+                            <div class="dtr-post-img"> <img src="assets/images/post-img1.jpg" alt="image"> </div>
+                            <div class="dtr-post-content">
+                                <p class="dtr-blog-category"><a href="#" class="color-green">Media Coverage</a></p>
+                                <h4><a href="#">How to use saas to create a positive work</a></h4>
+                                <p class="dtr-mb-20">There are many variations of passages of lorem ipsum dolor amet available...</p>
+                                <a href="#" class="dtr-read-more">Continue Reading<i class="icon-ellipsis-h dtr-ml-10 color-green"></i></a> </div>
+                        </div>
+                        <!-- blog item 1 ends -->
+
+                    </div>
+                    <!-- column 1 ends -->
+
+                    <!-- column 2 starts -->
+                    <div class="col-12 col-md-4 dtr-md-mt-30">
+
+                        <!-- blog item 2 starts -->
+                        <div class="dtr-blog-item dtr-shadow">
+                            <!-- image -->
+                            <div class="dtr-post-img"> <img src="assets/images/post-img2.jpg" alt="image"> </div>
+                            <div class="dtr-post-content">
+                                <p class="dtr-blog-category"><a href="#" class="color-green">Media Coverage</a></p>
+                                <h4><a href="#">5 tips to boost product based sale online</a></h4>
+                                <p class="dtr-mb-20">There are many variations of passages of lorem ipsum dolor amet available...</p>
+                                <a href="#" class="dtr-read-more">Continue Reading<i class="icon-ellipsis-h dtr-ml-10 color-green"></i></a> </div>
+                        </div>
+                        <!-- blog item 2 ends -->
+
+                    </div>
+                    <!-- column 2 ends -->
+
+                    <!-- column 3 starts -->
+                    <div class="col-12 col-md-4 dtr-md-mt-30">
+
+                        <!-- blog item 3 starts -->
+                        <div class="dtr-blog-item dtr-shadow">
+                            <!-- image -->
+                            <div class="dtr-post-img"> <img src="assets/images/post-img3.jpg" alt="image"> </div>
+                            <div class="dtr-post-content">
+                                <p class="dtr-blog-category"><a href="#" class="color-green">Media Coverage</a></p>
+                                <h4><a href="#">How to become a fully AI based company</a></h4>
+                                <p class="dtr-mb-20">There are many variations of passages of lorem ipsum dolor amet available...</p>
+                                <a href="#" class="dtr-read-more">Continue Reading<i class="icon-ellipsis-h dtr-ml-10 color-green"></i></a> </div>
+                        </div>
+                        <!-- blog item 3 ends -->
+
+                    </div>
+                    <!-- column 3 ends -->
+
+                </div>
+                <!-- row starts -->
+
+            </div>
+        </section>
+        <!-- news section ends
+================================================== -->
+
+        <!-- contact section starts
+================================================== -->
+        <section id="contact" class="dtr-section dtr-py-100">
+            <div class="container">
+
+                <!-- section intro row starts -->
+                <div class="row dtr-mb-50">
+                    <div class="col-12 text-center">
+                        <h2 class="dtr-mb-5">Get in touch</h2>
+                        <p>Contact us</p>
+                        <div class="dtr-styled-divider divider-center bg-light-green"></div>
+                    </div>
+                </div>
+                <!-- section intro row ends -->
+
+                <!-- row starts -->
+                <div class="row">
+
+                    <!-- column 1 starts -->
+                    <div class="col-12 col-md-5 dtr-md-mb-30"> <img src="assets/images/contact-img.png" alt="image"> </div>
+                    <!-- column 1 ends -->
+
+                    <!-- column 2 starts -->
+                    <div class="col-12 col-md-7">
+
+                        <!-- form starts -->
+                        <div class="dtr-form dtr-form-has-icon">
+                            <form id="contactform" method="post" action="php/contact-form-short.php">
+                                <fieldset>
+                                    <p class="dtr-input"> <i class="icon-envelope1 color-dark-blue"></i>
+                                        <input name="email"  class="required email" type="text" placeholder="john.doe@example.com">
+                                    </p>
+                                    <p class="antispam">Leave this empty: <br />
+                                        <input name="url" />
+                                    </p>
+                                    <p class="dtr-input"> <i class="icon-user-edit color-dark-blue"></i>
+                                        <textarea rows="4" name="message" id="message" class="required"  placeholder="Write Message"></textarea>
+                                    </p>
+                                    <p class="dtr-m-0">
+                                        <button class="dtr-btn btn-dark-blue" type="submit">Submit</button>
+                                    </p>
+                                    <div id="result"></div>
+                                </fieldset>
+                            </form>
+                        </div>
+                        <!-- form ends -->
+
+                    </div>
+                    <!-- column 2 ends -->
+
+                </div>
+                <!-- row ends -->
+
+            </div>
+        </section>
+        <!-- contact section ends
+================================================== -->
+
+        <!-- footer section starts
+================================================== -->
+        <footer id="dtr-footer" class="dtr-section-with-bg" style="background-image: url(assets/images/footer-bg.png);">
+            <div class="container">
+                <div class="row">
+
+                    <!-- column 1 starts -->
+                    <div class="col-12 col-sm-6 col-lg-4 dtr-mb-30"> <a href="index.html" class="d-block dtr-mb-15"><h3 style="color: whitesmoke;"> Stockrelief</h3></a>
+                        <p>Lorem ipsum dolor sit amet consect adipiscing elit, sed do eiusmod tempor incididunt labore at dolore.</p>
+                        <p>© 2021 StockRelief. All rights reserved.</p>
+                    </div>
+                    <!-- column 1 ends -->
+
+                    <!-- column 2 starts -->
+                    <div class="col-12 col-sm-6 col-lg-2 dtr-mb-30">
+                        <h4 class="color-white">Company</h4>
+                        <ul class="dtr-list-simple">
+                            <li><a href="#" class="dtr-styled-link">Features</a></li>
+                            <li><a href="#" class="dtr-styled-link">Plan</a></li>
+                            <li><a href="#" class="dtr-styled-link">Blog</a></li>
+                            <li><a href="#" class="dtr-styled-link">Contact</a></li>
+                        </ul>
+                    </div>
+                    <!-- column 2 ends -->
+
+                    <!-- column 3 starts -->
+                    <div class="col-12 col-sm-6 col-lg-2 dtr-mb-30">
+                        <h4 class="color-white">Support</h4>
+                        <ul class="dtr-list-simple">
+                            <li><a href="#" class="dtr-styled-link">Careers</a></li>
+                            <li><a href="#" class="dtr-styled-link">Help</a></li>
+                            <li><a href="#" class="dtr-styled-link">Privacy Policy</a></li>
+                            <li><a href="#" class="dtr-styled-link">Terms</a></li>
+                        </ul>
+                    </div>
+                    <!-- column 3 ends -->
+
+                    <!-- column 4 starts -->
+                    <div class="col-12 col-sm-6 col-lg-4 dtr-mb-30">
+                        <h4 class="color-white">Newsletter</h4>
+                        <div class="dtr-form dtr-form-has-icon dtr-form-no-gap">
+                            <p class="color-white"> Get informed of the latest features we introduce to help your business run smoothly. PS: we inform our subscribers of discounts before anyone else!</p>
+                            <form id="subscribeform" method="post" action="#">
+                                <fieldset>
+                                    <div class="dtr-form-row-2col">
+                                        <p class="dtr-input dtr-form-column"> <i class="icon-envelope1 color-dark-blue"></i>
+                                            <input name="email"  class="required email" type="text" placeholder="Email address">
+                                        </p>
+                                        <p class="dtr-form-column">
+                                            <button class="dtr-btn btn-green" type="submit">Subscribe</button>
+                                        </p>
+                                    </div>
+                                </fieldset>
+                            </form>
+                        </div>
+                        <div class="dtr-social-large">
+                            <ul class="dtr-social dtr-social-list color-white-muted-alt accent-color-hover text-center">
+                                <li><a href="#" class="dtr-twitter" target="_blank" title="twitter"></a></li>
+                                <li><a href="#" class="dtr-facebook" target="_blank" title="facebook"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- column 4 ends -->
+
+                </div>
+            </div>
+        </footer>
+        <!-- footer section ends
+================================================== -->
+
+    </div>
+    <!-- == main content area ends == -->
+
+</div>
+<!-- #dtr-wrapper ends -->
+
+<!-- JS FILES -->lo
+<script src="//code.jivosite.com/widget/25Lksdr5My" async></script>
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/plugins.js"></script>
+<script src="assets/js/custom.js"></script>
+</body>
 </html>
